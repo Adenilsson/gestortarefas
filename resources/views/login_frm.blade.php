@@ -22,6 +22,9 @@
             </div>
         
         </form>
+        <div class="input-group mb-3">
+            <button type="submit" class="btn btn-info w-100">Cadastrar</button>
+        </div>
 
     </div>
 </div>

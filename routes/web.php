@@ -14,7 +14,22 @@ use App\Http\Controllers\Main;
 |
 */
 
-Route::get('/',[Main::class, 'index'])->name('index');
-//login routes
-Route::get('/login',[Main::class,'login'])->name('login');
-Route::post('/login_submit', [Main::class, 'login_submit'])-> name ('login_submit') ; 
+
+
+ 
+// route with middware
+//In App
+Route::middleware('CheckLogin')->group(function(){
+    
+    Route::get('/', [Main::class, 'index'])->name('index'); 
+    Route::get('/logout',[Main::class, 'logout'])->name('logout');
+});
+//Out App
+Route::middleware('CheckLogout')->group(function(){ 
+   // log out
+    Route::get('/login',[Main::class,'login'])->name('login');
+    Route::post('/login_submit', [Main::class, 'login_submit'])-> name ('login_submit') ;
+
+});
+
+

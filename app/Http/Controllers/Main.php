@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\DB;
 class Main extends Controller
 {
     public function index(){
-        echo "Gestor de Tarefas";
+       $data=[
+        'title'=>'Gestor de Tarefas'
+       ];
+       return view('main',$data);
     }
     public function login(){
         $data =[
@@ -18,6 +21,18 @@ class Main extends Controller
         return view('login_frm',$data);
     }
     public function login_submit(){
-        echo "Submissão do login";
+        session()->put('username','admin');
+        echo "Você está logado.";
+    }
+    public function main(){
+        $data =[
+            'title'=>'Main'
+        ];
+        return  view('main',$data);
+    }
+    public function logout(){
+        session()->forget('username');
+        return redirect()->route('login');
+        
     }
 }
