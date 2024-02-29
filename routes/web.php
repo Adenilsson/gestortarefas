@@ -23,3 +23,5 @@ Route::get('/', function () {
    }
 });
 Route::get('/main',[Main::class, 'index']);
+Route::get('/users',[MAIN::class, 'users']);
+Route::get('/view',[MAIN::class, 'view']);
