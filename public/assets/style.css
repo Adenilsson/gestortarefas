@@ -12,3 +12,10 @@
     color: white;
 
 }
+.footer{
+	position: inherit;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	clear: both;
+}

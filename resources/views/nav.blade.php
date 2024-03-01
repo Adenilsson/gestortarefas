@@ -7,7 +7,9 @@
             </div>
 
             <div class="col p-3 text-end"> 
-                 [username] | logaut
+                <span><i class="bi bi-person-circle me-2"></i> {{ session()->get('username') }}</span>
+                <span class="mx-3 opacity-50"><i class="bi bi-three-dots-vertical"></i></span>
+                <a href="{{ route('logout') }}" class="btn btn-outline-danger"> Sair <span><i class="bi bi-box-arrow-right ms-2 trasp"></i></span></a>
 
             </div>
         </div>
