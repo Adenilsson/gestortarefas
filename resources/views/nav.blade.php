@@ -1,4 +1,4 @@
-<div class="br-black text-white mb5">
+<div class="bg-black text-white mb5">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col">

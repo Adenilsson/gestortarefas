@@ -81,11 +81,16 @@ class Main extends Controller
 //new task
 //=======================================================
 public function new_task(){
-    
-
+    $data=[
+        'title' =>'Nova tarefa',
+    ];
+    return view('new_task_form', $data);
 }
-public funcition new_task_submit(){
-
+public function  new_task_submit(){
+    $data =[
+        'title' => 'Cadastro de Task',
+    ];
+    echo " gruardar nova tarefa";
 }
 
 
